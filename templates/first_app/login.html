@@ -1,0 +1,24 @@
+{% extends 'first_app/Home.html' %}
+{% block content %}
+         {% if login %}
+         <table>
+           <thead>
+             <tr>
+                <th>first_name</th>
+                <th>Last_name</th>
+                <th>email</th>
+            </tr>
+           </thead>
+           <tbody>
+           {% for person in login%}
+           <tr>
+             <td>{{person.first_name}}</td>
+             <td>{{person.Last_name}}</td>
+             <td>{{person.Email}}</td>
+           </tr>
+           </tbody>
+           {% endfor %}
+         </table>
+
+         {% endif %}
+{% endblock %}
